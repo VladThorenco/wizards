@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>wizads</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+<div class="container">
+    <form action="" class="registration-from" id="registration-users-form">
+        <div class="forms-fields">
+            <div class="name">
+                <input type="text" placeholder="Имя" id="name" class="fields">
+                <div class="hints-error-name reset-hints-focus">
+                    <div class="triangle-hints"></div>
+                    <p class="hints_text">Не вверно введено имя</p>
+                </div>
+            </div>
+            <div class="last-name">
+                <input type="text" placeholder="Фамилия" id="sur-name" class="fields">
+                <div class="hints-error-last-name reset-hints-focus">
+                    <div class="triangle-hints"></div>
+                    <p class="hints_text">Не вверно введено фамилия</p>
+                </div>
+            </div>
+            <div class="mail">
+                <input type="email" placeholder="Эл. почта" id="email" class="fields">
+                <div class="hints-error-mail reset-hints-focus">
+                    <div class="triangle-hints"></div>
+                    <p class="hints_text">Не корректный адрес почты</p>
+                </div>
+            </div>
+            <div class="phone">
+                <div class="numbers-phone">
+                    <p>+ <span class="numbers-for-write">380</span></p>
+                    <div class="triangle"></div>
+                    <div class="drop-down">
+                        <div class="scrollbar" id="style-scroll"></div>
+                        <div class="drop-down-phones">
+                            <div class="num-phone">
+                            <span>
+                                <span class="plus">+</span>
+                                <span class="numbers-country">381</span>
+                            </span>
+                                <p class="country">Ангола</p>
+                            </div>
+                            <div class="num-phone">
+                        <span>
+                            <span class="plus">+</span>
+                            <span class="numbers-country">382</span></span>
+                                <p class="country">Андорра</p>
+                            </div>
+                            <div class="num-phone">
+                        <span>
+                            <span class="plus">+</span>
+                            <span class="numbers-country">374</span></span>
+                                <p class="country"> Армения</p>
+                            </div>
+                            <div class="num-phone">
+                        <span>
+                            <span class="plus">+</span>
+                            <span class="numbers-country">973</span></span>
+                                <p class="country">Бахрейн</p>
+                            </div>
+                            <div class="num-phone">
+                        <span>
+                            <span class="plus">+</span>
+                            <span class="numbers-country">880</span></span>
+                                <p class="country">Бангладеш</p>
+                            </div>
+                            <div class="num-phone">
+                        <span>
+                            <span class="plus">+</span>
+                            <span class="numbers-country">591</span></span>
+                                <p class="country">Боливия</p>
+                            </div>
+                            <div class="num-phone">
+                        <span>
+                            <span class="plus">+</span>
+                            <span class="numbers-country">267</span></span>
+                                <p class="country"> Ботсвана</p>
+                            </div>
+                            <div class="num-phone">
+                        <span>
+                            <span class="plus">+</span>
+                            <span class="numbers-country">359</span></span>
+                                <p class="country">Болгария</p>
+                            </div>
+                            <div class="num-phone">
+                        <span>
+                            <span class="plus">+</span>
+                            <span class="numbers-country">855</span></span>
+                                <p class="country">Камбоджа</p>
+                            </div>
+                            <div class="num-phone">
+                        <span>
+                            <span class="plus">+</span>
+                            <span class="numbers-country">237</span></span>
+                                <p class="country">Камерун</p>
+                            </div>
+                            <div class="num-phone">
+                        <span>
+                            <span class="plus">+</span>
+                            <span class="numbers-country">235</span></span>
+                                <p class="country"> Чад</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-field">
+                    <input type="text" class="input-field fields" placeholder="Телефон" id="phone" value="1234567">
+                    <div class="hints-input-field input-hints-style">
+                        <div class="triangle-hints"></div>
+                        <p class="hints_text">Не корректный номер</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pass">
+                <input type="password" placeholder="Пароль" id="pass" class="fields">
+                <div class="hints-pass">
+                    <div class="triangle-hints"></div>
+                    <p class="hints_text">Не корректный пароль</p>
+                </div>
+            </div>
+            <div class="wrap-agree">
+                <input type="checkbox" id="agree">
+                <label for="agree">
+                    <span class="done-agree">Я принимаю</span>
+                    <span class="orange-agree">условия обработки персональных данных</span>
+                </label>
+            </div>
+            <div class="registration-button">
+                <input type="submit" value="Регистрация" id="button-submit">
+            </div>
+        </div>
+    </form>
+    <div class="modal-rename">
+        <div class="modal-close-rename"></div>
+        <form action="" id="rename-user-form">
+            <div class="rename-name">
+                <input type="text" placeholder="Имя" id="rename-name" class="fields">
+                <div class="hints-error-name reset-hints-focus">
+                    <div class="triangle-hints"></div>
+                    <p class="hints_text">Не вверно введено имя</p>
+                </div>
+            </div>
+            <div class="rename-last-name">
+                <input type="text" placeholder="Фамилия" id="rename-sur-name" class="fields">
+                <div class="hints-error-last-name reset-hints-focus">
+                    <div class="triangle-hints"></div>
+                    <p class="hints_text">Не вверно введено фамилия</p>
+                </div>
+            </div>
+            <div class="rename-mail">
+                <input type="email" placeholder="Эл. почта" id="rename-email" class="fields">
+                <div class="hints-error-mail reset-hints-focus">
+                    <div class="triangle-hints"></div>
+                    <p class="hints_text">Не корректный адрес почты</p>
+                </div>
+            </div>
+            <div class="rename-phone">
+                <div class="input-field-rename">
+                    <input type="text" class="input-field fields" placeholder="Телефон" id="rename-phone">
+                    <div class="hints-input-field input-hints-style">
+                        <div class="triangle-hints"></div>
+                        <p class="hints_text">Не корректный номер</p>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-rename">
+                <input type="button" value="Изменить" id="btn-rename-user">
+            </div>
+        </form>
+    </div>
+    <div class="overlay"></div>
+    <div class="over-modal">
+        <div class="modal-users">
+            <div class="close"></div>
+            <div class="cool-user">
+                <span class="total-text">Total:</span>
+                <span class="total-num"></span>
+            </div>
+            <div class="date-user">
+                <p class="date-user-name">Имя</p>
+                <p class="date-last-name">Фамилия</p>
+                <p class="date-user-email">Email</p>
+                <p class="date-user-phone">Телефон</p>
+            </div>
+            <div class="user-info">
+                <p class="name-user">Admin</p>
+                <p class="last-name-user">Server</p>
+                <p class="user-email">admin@gmail.com</p>
+                <p class="user-phone"><span class="num">+380</span><span class="user-numb-phone">0000000</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="all-users">
+        <a href="" class="all-users-item">Все пользователи</a>
+    </div>
+
+</div>
+</body>
+</html>

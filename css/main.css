@@ -1,0 +1,569 @@
+*, html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* hints error */
+.name,
+.last-name,
+.mail,
+.input-field,
+.pass {
+  position: relative;
+}
+
+.hints-error-name,
+.hints-error-last-name,
+.hints-error-mail,
+.hints-input-field,
+.hints-pass {
+  display: none;
+  width: 182px;
+  height: 35px;
+  align-items: center;
+  padding: 12px;
+  position: absolute;
+  top: -46px;
+  left: -14px;
+  z-index: 200;
+  background: black;
+  color: white;
+  font-size: 13px;
+  border-bottom: 1px solid red;
+}
+
+.input-hints-style {
+  width: 149px;
+}
+
+.triangle-hints {
+  border-radius: 10px;
+  position: relative;
+  bottom: -17px;
+  left: -15px;
+}
+
+.triangle-hints::before, .triangle-hints::after {
+  content: '';
+  position: absolute;
+  left: 20px;
+  bottom: -20px;
+  border: 10px solid transparent;
+  border-top: 10px solid red;
+}
+
+.triangle-hints::after {
+  border-top: 10px solid black;
+  bottom: -19px;
+}
+
+
+.registration-from {
+  width: 305px;
+  margin-top: 40px;
+  background: #303136;
+  box-shadow: 1px 1px 20px black;
+  border-left: 3px solid #cd9338;
+  padding: 20px 15px 20px 15px;
+}
+
+.forms-fields {
+  margin-left: 15px;
+}
+
+.name > input, .last-name > input, .mail > input, .pass > input {
+  width: 238px;
+  height: 36px;
+  padding-left: 10px;
+  margin-bottom: 15px;
+  outline: 0;
+  border: 2px solid #d2dde2;
+}
+
+.name > input:focus, .last-name > input:focus, .mail > input:focus, .pass > input:focus, .input-field > input:focus {
+  border: 2px solid #efa43a;
+}
+
+.mail > input {
+  background: #fff url("../img/question.png") no-repeat 97% center;
+  padding-right: 25px;
+}
+
+.phone {
+  width: 238px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.numbers-phone {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  padding-left: 7px;
+  width: 89px;
+  height: 36px;
+  background: #ffffff;
+  color: #7a8387;
+  margin-bottom: 15px;
+  outline: 0;
+  border: 2px solid #d2dde2;
+}
+
+.triangle {
+  border-radius: 10px;
+  position: relative;
+  color: #fff;
+  cursor: pointer;
+}
+
+.triangle:after {
+  content: '';
+  position: absolute; /* Абсолютное позиционирование */
+  left: 20px;
+  bottom: -10px; /* Положение треугольника */
+  border: 6px solid transparent; /* Прозрачные границы */
+  border-top: 8px solid black; /* Добавляем треугольник */
+}
+
+.change-triangle:after {
+  border-top: 8px solid #efa43a; /* Добавляем треугольник */
+}
+
+.drop-down-phones {
+  display: none;
+  width: 238px;
+  height: 146px;
+  position: absolute;
+  bottom: -155px;
+  left: -2px;
+  background: white;
+  color: white;
+  z-index: 200;
+  overflow-y: scroll;
+}
+
+/*!* Stilization scroll *!*/
+/*.scrollbar {*/
+/*  display: flex;*/
+/*  margin-left: 30px;*/
+/*  height: 300px;*/
+/*  width: 15px;*/
+/*  background: #F5F5F5;*/
+/*  overflow-y: scroll;*/
+/*  margin-bottom: 25px;*/
+/*}*/
+
+/*#style-scroll::-webkit-scrollbar-track {*/
+/*  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
+/*  background-color: #F5F5F5;*/
+/*}*/
+
+/*#style-scroll::-webkit-scrollbar*/
+/*{*/
+/*  width: 6px;*/
+/*  background-color: #F5F5F5;*/
+/*}*/
+
+/*#style-scroll::-webkit-scrollbar-thumb*/
+/*{*/
+/*  background-color: #000000;*/
+/*}*/
+
+.num-phone {
+  padding: 5px;
+  padding-left: 0px;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  color: black;
+  background: white;
+  cursor: pointer;
+}
+
+.num-phone:hover {
+  background: #f1a63d;
+  color: white;
+}
+
+.plus {
+  margin-left: 10px;
+}
+
+.country {
+  margin-left: 10px;
+}
+
+.input-field > input {
+  width: 134px;
+  height: 36px;
+  background: #ffffff;
+  color: #7a8387;
+  margin-bottom: 15px;
+  padding-left: 10px;
+  outline: 0;
+  border: 2px solid #d2dde2;
+}
+
+.pass > input {
+  background: #fff url("../img/egg.png") no-repeat 97% center;
+  padding-right: 28px;
+}
+
+/* Стилизация checkbox */
+
+.wrap-agree input[type="checkbox"]:checked,
+.wrap-agree input[type="checkbox"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+  border: 2px solid #d2dde2;
+}
+
+.wrap-agree input[type="checkbox"]:checked + label,
+.wrap-agree input[type="checkbox"]:not(:checked) + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 28px;
+  /*line-height: 20px;*/
+  cursor: pointer;
+}
+
+.wrap-agree input[type="checkbox"]:checked + label:before,
+.wrap-agree input[type="checkbox"]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #dddddd;
+  background-color: #ffffff;
+}
+
+.error-checked input[type="checkbox"]:checked + label:before,
+.error-checked input[type="checkbox"]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgb(255, 0, 0);
+  background: rgb(255, 229, 229);
+}
+
+.wrap-agree input[type="checkbox"]:checked + label:before,
+.wrap-agree input[type="checkbox"]:not(:checked) + label:before {
+  border-radius: 2px;
+}
+
+.wrap-agree input[type="radio"]:checked + label:before,
+.wrap-agree input[type="radio"]:not(:checked) + label:before {
+  border-radius: 100%;
+}
+
+.wrap-agree input[type="checkbox"]:checked + label:after,
+.wrap-agree input[type="checkbox"]:not(:checked) + label:after {
+  left: 2px;
+  top: 2px;
+  content: "";
+  position: absolute;
+}
+
+.wrap-agree input[type="checkbox"]:checked + label:after {
+  left: 2px;
+  top: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 1px;
+  background: url("../img/Vector Smart Object.png") no-repeat center center;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(0deg);
+}
+
+.wrap-agree input[type="checkbox"]:not(:checked) + label:after {
+  left: 2px;
+  top: 2px;
+  width: 14px;
+  height: 14px;
+  background: none;
+}
+
+.done-agree {
+  color: white;
+  font-size: 13px;
+}
+
+.orange-agree {
+  color: #dea242;
+  font-size: 13px;
+}
+
+.registration-button > input[type="submit"] {
+  width: 242px;
+  height: 46px;
+  margin-top: 15px;
+  background: linear-gradient(to bottom, #fcbb4c, #f9b141, #f09829);
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  color: #303136;
+  cursor: pointer;
+}
+
+
+/* Modal */
+.modal-users {
+  margin-top: 20px;
+  background: #ffffff;
+}
+
+.date-user {
+  display: flex;
+  background: black;
+  padding: 10px;
+  margin-bottom: 19px;
+  color: white;
+}
+
+.date-user .date-user-name,
+.date-user .date-last-name,
+.date-user .date-user-email,
+.date-user .date-user-phone,
+.user-info .name-user,
+.user-info .last-name-user,
+.user-info .user-email,
+.user-info .user-phone {
+  width: 20%;
+  max-width: 20%;
+  text-align: left;
+  font-size: 17px;
+  margin-right: 5%;
+  word-wrap: break-word;
+}
+
+.date-user .date-user-phone {
+  text-align: right;
+}
+
+.user-info .user-phone {
+  text-align: right;
+  margin-right: 0;
+}
+
+.user-info {
+  display: flex;
+  background: #f6f6f6;
+  padding: 10px;
+  color: #8b8c8c;
+}
+
+.user-info:nth-child(odd) {
+  background: #fff;
+}
+
+.user-info:nth-child(even) {
+  background: #f6f6f6;
+}
+
+.user-info:hover {
+  background: grey;
+  cursor: pointer;
+  transition: all .7s;
+}
+
+.user-info:hover > p {
+  color: white;
+  transition: all .7s;
+}
+
+.over-modal {
+  display: flex;
+  width: 800px;
+  height: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -300px 0 0 -400px;
+  border-radius: 5px;
+
+  padding: 20px;
+  text-align: center;
+  z-index: 3000;
+  max-width: 960px;
+  background: #fff;;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: .9;
+  top: 0;
+  left: 0;
+  background: #464848;
+}
+
+.close {
+  width: 20px;
+  height: 20px;
+  background: url("../img/close1.png") no-repeat;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.cool-user {
+  display: flex;
+  justify-content: flex-start;
+  color: red;
+  font-weight: bold;
+  margin-bottom: 27px;
+}
+
+.total-text {
+  color: #8b8c8c;
+}
+
+.total-num {
+  margin-left: 20px;
+  font-weight: bold;
+  color: #e60404;
+}
+
+/* popup users */
+.overlay {
+  display: none;
+}
+
+.show-close {
+  display: block;
+}
+
+.over-modal {
+  display: none;
+}
+
+.show-over-modal {
+  display: block;
+}
+
+.user-email {
+  color: #9a9b9b;
+  font-weight: bold;
+}
+
+.user-phone {
+  color: #000000;
+}
+
+.user-numb-phone {
+  margin-left: 5px;
+}
+
+.delete-user {
+  width: 17px;
+  height: 17px;
+  margin-left: 15px;
+  margin-top: 1px;
+  background: url("../img/delete.png") no-repeat center center;
+}
+
+.rename-user {
+  width: 17px;
+  height: 17px;
+  margin-left: 15px;
+  margin-top: 1px;
+  background: url("../img/Rename.png") no-repeat center center;
+}
+
+/* all users */
+.all-users {
+  display: flex;
+}
+
+.all-users-item {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #303136;
+  background: linear-gradient(to bottom, #fcbb4c, #f9b141, #f09829);
+  font-weight: bold;
+}
+
+.modal-rename {
+  width: 100%;
+  display: none;
+  position: relative;
+  top: -400px;
+  left: 10px;
+  z-index: 10000;
+  background: #303136;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.modal-close-rename {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 8px;
+  right: 6px;
+  cursor: pointer;
+  background: url("../img/close1.png") no-repeat;
+}
+
+#rename-user-form {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.rename-name > input,
+.rename-last-name > input,
+.rename-mail > input,
+.rename-phone > input,
+.rename-pass > input,
+.input-field-rename > input,
+.btn-rename > input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #7a8387;
+}
+
+.btn-rename > input {
+  border: none;
+  outline: 0;
+  background: linear-gradient(to bottom, #fcbb4c, #f9b141, #f09829);
+  color: #303136;
+  cursor: pointer;
+}
+
+.btn-rename > input:hover {
+  color: white;
+}
